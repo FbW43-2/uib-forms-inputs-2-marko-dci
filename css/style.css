@@ -1,0 +1,46 @@
+.input-wrapper {
+    padding: 8px 0;
+}
+
+.input-wrapper > label {
+    display: inline-block;
+    text-align: right;
+    padding-right: 8px;
+    min-width: 240px;
+}
+
+.input-wrapper.submit-wrapper {
+    position: relative;
+}
+
+button[type="submit"] {
+    position: absolute;
+    left: 248px;
+}
+
+.main-legend {
+    width: 180px;
+    text-align: center;
+    background-color: greenyellow;
+    margin: 0 auto;
+}
+
+input[maxlength]:focus {
+    border: solid 5px black;
+    border-radius: 7px;
+}
+
+input:invalid {
+    border: none;
+    outline: none;
+    background: orange;
+}
+
+input[text]::placeholder {
+    font-style: italic;
+    color: darkgray;
+}
+
+input {
+    min-width: 320px;
+}
