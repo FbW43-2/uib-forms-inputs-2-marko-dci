@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise: Forms / Inputs</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main role="main">
+        <form method="POST" action="/submit-info">
+            <fieldset>
+                <legend class="main-legend">Car Insurance Form</legend>
+                <div class="input-wrapper">
+                    <label for="in-first-name">First name</label>
+                    <input type="text" id="in-first-name" name="first-name" maxlength="30" required placeholder="Your first name...">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="in-last-name">Last name</label>
+                    <input type="text" id="in-last-name" name="last-name" maxlength="50" required placeholder="Your last name...">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="in-profile-picture">Profile picture</label>
+                    <input type="file" id="in-profile-picture" name="profile-picture" accept="image/*">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="in-insurance-type">Insurance type</label>
+                    <input type="text" id="in-insurance-type" name="insurance-type" value="Insurance type 1" readonly>
+                </div>
+
+                <fieldset>
+                    <legend>Address</legend>
+
+                    <div class="input-wrapper">
+                        <label for="in-street">Street name</label>
+                        <input type="text" id="in-street" name="street" required maxlength="150" placeholder="Input the street name only (without number)...">
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="in-house-number">House number</label>
+                        <input type="number" id="in-house-number" name="house-number" required min="1" max="300">
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="in-postal-code">Postal code</label>
+                        <input type="text" id="in-postal-code" name="postal-code" required>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="in-city">City</label>
+                        <input list="list-cities" type="text" id="in-city" name="city" required>
+
+                        <datalist id="list-cities">
+                            <option value="Berlin">
+                            <option value="Horb am Neckar">
+                            <option value="Hamburg">
+                            <option value="Leipzig">
+                            <option value="Stuttgart">
+                            <option value="Horb am Neckar">
+                        </datalist>
+                    </div>
+                </fieldset>
+
+                <div class="input-wrapper">
+                    <label for="in-car-brands">Car brand</label>
+                    <select id="in-car-brands" name="car-brand">
+                        <optgroup label="Swedish brands">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                        </optgroup>
+                        <optgroup label="Japanese brands">
+                            <option value="toyota">Toyota</option>
+                            <option value="honda">Honda</option>
+                            <option value="nissan">Nissan</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="in-car-pics">Car pictures</label>
+                    <input type="file" id="in-car-pics" name="car-pics" accept=".jpg, .jpeg" multiple>
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="in-salary">Monthly salary (EUR)</label>
+                    <select id="in-salary" name="salary">
+                        <option value="0">0</option>
+                        <option value="1">0 - 1000</option>
+                        <option value="2">1000 - 3000</option>
+                        <option value="3">3000 - 5000</option>
+                        <option value="4">5000 - 7000</option>
+                        <option value="5">7000 - 10000</option>
+                        <option value="6">10000+</option>
+                    </select>
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="in-plates">Car plates</label>
+                    <input type="text" id="in-plates" name="plates" pattern="[A-Za-z]{3}[0-9]{6}" required>
+                </div>
+
+                <div class="input-wrapper submit-wrapper">
+                    <button type="submit">Submit</button>
+                </div>
+
+            </fieldset>
+
+        </form>
+    </main>
+</body>
+
+</html>
